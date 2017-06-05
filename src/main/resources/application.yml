@@ -1,0 +1,34 @@
+spring.resources.chain.enabled: true
+spring.mvc.view.prefix: /WEB-INF/jsp/
+spring.mvc.view.suffix: .jsp
+spring.jpa.hibernate.ddl-auto: create-drop
+facebook:
+    client:
+      clientId: 1108215532522350
+      clientSecret: f6682401a33335872c99a4b387f69182
+      accessTokenUri: https://graph.facebook.com/oauth/access_token
+      userAuthorizationUri: https://www.facebook.com/dialog/oauth
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://graph.facebook.com/me
+google:
+    client:
+      clientId: 116420772004-81eqlrdrrr80hdoe5s8ht43glh440arq.apps.googleusercontent.com
+      clientSecret: i4j78S7e6er-55fAGGdcFkC7
+      accessTokenUri: https://accounts.google.com/o/oauth2/token
+      userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+      scope: openid
+    resource:
+      userInfoUri: https://www.googleapis.com/plus/v1/people/me
+security:
+  oauth2:
+    client:
+      client-id: acme
+      client-secret: acmesecret
+      scope: read,write
+      auto-approve-scopes: '.*'
